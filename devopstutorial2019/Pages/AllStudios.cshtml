@@ -1,0 +1,32 @@
+﻿@page
+@model devopstutorial2019.Pages.AllStudiosModel
+@{
+}
+<h1>Studios</h1>
+<table class="table table-bordered">
+    <tbody>
+    @if (@Model.Studios != null)
+    {
+        foreach (var studio in Model.Studios)
+        {
+            <tr class="btn-secondary">
+                <td>
+                    @studio.Id
+                </td>
+                <td>
+                    @studio.Name
+                </td>
+                <td>
+                    @studio.HQCity
+                </td>
+                <td>
+                    @studio.NoOfEmployees
+                </td>
+                <td>
+                    <!-- Call to action buttons -->
+                </td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>
